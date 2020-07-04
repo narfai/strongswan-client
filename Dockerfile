@@ -3,6 +3,7 @@ FROM alpine
 RUN apk add --no-cache --update strongswan curl
 
 COPY ipsec.conf  /install/ipsec.conf
+COPY ipsec.secrets  /install/ipsec.secrets
 
 COPY entrypoint.sh /entrypoint.sh
 

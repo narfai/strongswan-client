@@ -13,3 +13,13 @@ docker run -ti --rm \
     -e ENV VPN_USER_KEY="/vpn-user/key.pem" \
     fcadeillan/strongswan-client
 ```
+
+## Overide vpn conf
+
+```
+docker run -ti --rm \
+    -v $(pwd)/ipsec.conf:/install/ipsec.conf \
+    -v $(pwd)/ipsec.secrets:/install/ipsec.secrets \
+    [...]
+    fcadeillan/strongswan-client
+```
