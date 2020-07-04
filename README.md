@@ -4,6 +4,7 @@
 
 ```
 docker run -ti --rm \
+    --cap-add=NET_ADMIN \
     -v $(pwd)/ca_cert.pem:/vpn-user/ca_cert.pem \
     -v $(pwd)/crt.pem:/vpn-user/crt.pem \
     -v $(pwd)/key.pem:/vpn-user/key.pem \
@@ -18,6 +19,7 @@ docker run -ti --rm \
 
 ```
 docker run -ti --rm \
+    --cap-add=NET_ADMIN \
     -v $(pwd)/ipsec.conf:/install/ipsec.conf \
     -v $(pwd)/ipsec.secrets:/install/ipsec.secrets \
     [...]
