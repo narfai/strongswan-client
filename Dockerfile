@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk add --no-cache --update strongswan curl
+RUN apk add --no-cache --update strongswan curl iperf
 
 COPY ipsec.conf  /install/ipsec.conf
 COPY ipsec.secrets  /install/ipsec.secrets
