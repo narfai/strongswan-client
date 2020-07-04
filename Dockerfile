@@ -10,7 +10,7 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/bin/ash", "/entrypoint.sh"]
-CMD ["run"]
+CMD ["ash"]
 
 ENV VPN_SERVER_DOMAIN="vpn.example.com"
 ENV VPN_SERVER_CA="/vpn-user/ca_cert.pem"
